@@ -290,17 +290,17 @@ tetris_run(int w, int h) {
         }
         while ((cmd=getchar())>0) {
             switch (cmd) {
-                case 'q':
+                case 'j':
                     t.x--;
                     if (tetris_hittest(&t))
                         t.x++;
                     break;
-                case 'd':
+                case 'l':
                     t.x++;
                     if (tetris_hittest(&t))
                         t.x--;
                     break;
-                case 's':
+                case 'k':
                     tetris_gravity(&t);
                     break;
                 case ' ':
